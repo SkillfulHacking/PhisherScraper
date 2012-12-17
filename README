@@ -1,0 +1,7 @@
+README
+This is a script to automate the scraping of webpages and storing them in a php 
+file to later displayed.  Currently you have to edit the generated php file 
+such that the POST action in the form you are trying to capture calls login.php
+User credentials are stored in phishedpasswd.txt admin.php lets you enter the 
+URL of the page you want to copy and the name of the php file it will generate.
+There is still much work to be done. 

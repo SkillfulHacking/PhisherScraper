@@ -1,11 +1,11 @@
 /* PhisherScraper
  Scrapes page using Google Chrome useragent
  copyright (c) 2011 Mark Scrano mscrano@ieee.org
- version 0.1
+ version 0.2
 */
 <?php
-$targetUrl = $_POST['targetUrl'];
-$phpFile = $_POST['phpFile'];
+$targetUrl = htmlspecialchars($_POST['targetUrl']);
+$phpFile = htmlspecialchars($_POST['phpFile']);
 //change user agent
 ini_set('user_agent', 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.224 Safari/534.10');
 //pull down html from URL
