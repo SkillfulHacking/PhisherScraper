@@ -1,13 +1,17 @@
 /* PhisherScraper
  Scrapes page using Google Chrome useragent
  copyright (c) 2011 Mark Scrano mscrano@ieee.org
- version 0.2
+ version 0.3
 */
 <?php
 $targetUrl = htmlspecialchars($_POST['targetUrl']);
 $phpFile = htmlspecialchars($_POST['phpFile']);
+$userAgent = htmlspecialchars($_POST['uagent']);
+
 //change user agent
-ini_set('user_agent', 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.224 Safari/534.10');
+
+
+ini_set('user_agent', $userAgent);
 //pull down html from URL
 $fileIn = fopen($targetUrl, 'r') or die('Epic Fail...');
 $inputWebpage = stream_get_contents($fileIn, -1);
